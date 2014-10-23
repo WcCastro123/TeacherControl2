@@ -7,7 +7,7 @@ using System.Data;
 using System.Configuration;
 namespace DAL
 {
-    public class Conexion
+    public class ConexionDb
     {
         //todo:forma correcta de leer el ConnectionString
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
@@ -73,15 +73,18 @@ namespace DAL
             }
             return dt;
         }
-    
 
-       //void prueba()
-       // {
-       //     DataTable dt = BuscarDb("select nombre from estudiantes");
-       //    SqlDataReader 
-       //    //dt.Rows[0]["nombre"]
-       //     cmd.ExecuteScalar();
-       // }
+
+        public Object ObtenerValorDb(string select)
+        {
+            con.Open();
+            SqlCommand com = new SqlCommand(select, con);
+            Object o = com.ExecuteScalar();
+            con.Close();
+            return o;
+        }
+
+        
 
     }
 }

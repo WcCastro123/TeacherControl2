@@ -4,21 +4,28 @@
         .auto-style1 {
             width: 119px;
         }
+        .auto-style2 {
+            width: 119px;
+            height: 26px;
+        }
+        .auto-style3 {
+            height: 26px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table style="width:100%;">
         <tr>
-            <td class="auto-style1">Fecha:</td>
-            <td>
+            <td class="auto-style2">Fecha:</td>
+            <td class="auto-style3">
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
+            <td class="auto-style3"></td>
         </tr>
         <tr>
             <td class="auto-style1">Asignatura:</td>
             <td>
-                <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="241px">
+                <asp:DropDownList ID="AsignaturaDropDownList" runat="server" Height="16px" Width="241px">
                 </asp:DropDownList>
             </td>
             <td>&nbsp;</td>
@@ -26,7 +33,7 @@
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Button" />
+                <asp:Button ID="IniciarButton" runat="server" Text="Iniciar" OnClick="IniciarButton_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>

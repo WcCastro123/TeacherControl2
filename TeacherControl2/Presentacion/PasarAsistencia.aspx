@@ -32,12 +32,12 @@
                 </asp:DropDownList>
             </td>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Button" />
+                <asp:Button ID="AgregarButton" runat="server" Text="Agregar" />
             </td>
         </tr>
         <tr>
             <td class="auto-style1" colspan="3">
-                <asp:GridView ID="GridView1" runat="server">
+                <asp:GridView ID="AsistenciaGridView" runat="server">
                 </asp:GridView>
             </td>
         </tr>

@@ -19,7 +19,7 @@ namespace BLL
         public string Telefono { set; get; }
         public string Celular { set; get; }
         
-        Conexion conexion = new Conexion();
+        ConexionDb conexion = new ConexionDb();
         
         public bool Insertar()
         {
